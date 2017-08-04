@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBlog Index</title>
+</head>
+<body>
+    <h1 style="color: red">汽车之家</h1>
+    <br/>
+
+    {% for Art in Arts %}
+        <h1><a href="{% url 'myblog:show' Art.id %}">{{ Art.title }}</a></h1>
+        <br/>
+
+    {% endfor %}
+
+
+    <a href="{% url 'myblog:edit' %}">发表新文章</a>
+</body>
+</html>
